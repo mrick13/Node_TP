@@ -1,5 +1,6 @@
 {
   "name": "tp-node",
+  "type": "commonjs",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -19,5 +20,15 @@
     "url": "https://github.com/mrick13/Node_TP/issues"
   },
   "homepage": "https://github.com/mrick13/Node_TP#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "sequelize": "^6.37.5"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^9.4.0"
+  }
 }
