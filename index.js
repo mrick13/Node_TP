@@ -1,15 +1,22 @@
-
 const { faker } = require('@faker-js/faker');
-
 require('dotenv/config')
-
-console.log('Hello World');
-
 const express = require('express')
 const app = express()
 const port = process.env.PORT || 3000
 const cors = require('cors')
 const bodyParser = require('body-parser')
+const { Sequelize } = require('sequelize');
+const sequelize = new Sequelize (process.env.DB_USER, process.env.DB_PASS,process.env.DB_PORT,process.env.DB_NAME, {
+    user: process.env.DB_USER,
+    password : process.env.DB_PASS,
+    name : process.env.DB_NAME,
+    port : process.env.DB_PORT,
+    dialect: 'postgres',
+})
+
+console.log(sequelize)
+
+
 
 app.use(cors())
 
